@@ -55,3 +55,49 @@ class TrafficLight {
 
       const trafficLight = new TrafficLight();
       trafficLight.promptControl();
+
+
+
+
+
+
+class cars {
+  constructor(model, color, wheels) {
+    this.model = model
+    this.color = color
+    this.wheels = wheels
+  }
+
+  start() {
+    console.log('Машина заведена')
+  }
+}
+
+class sportCar extends cars {
+  constructor(model, color, wheels, maxSpeed) {
+    super(model, color, wheels)
+    this.maxSpeed = maxSpeed
+  }
+}
+
+class suv extends cars {
+  constructor(model, color, wheels, groundClearance) {
+    super(model, color, wheels)
+    this.groundClearance = groundClearance
+  }
+}
+
+class truck extends cars {
+  constructor(model, color, wheels, maxLoadWeight) {
+    super(model, color, wheels)
+    this.maxLoadWeight = maxLoadWeight
+  }
+}
+
+const car1 = new sportCar('Ferrari', 'red', 4, 350)
+const car2 = new suv('Toyota', 'black', 4, 200)
+const car3 = new truck('MAN', 'white', 6, 2000)
+
+car1.start()
+car2.start()
+car3.start()
